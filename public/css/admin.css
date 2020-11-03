@@ -1,0 +1,143 @@
+body {
+    font-family: 'Nunito', sans-serif !important;
+}
+
+/* ---------- HEADER --------- */
+
+.btn.btn-primary {
+    background-color: #EC8B32 !important;
+    border-color: #EC8B32 !important;
+}
+
+#background-nav {
+    background-color: #EC8B32;
+    height: 72px;
+    margin-bottom: -69px;
+    min-width: 576px;
+    overflow: auto;
+    width: 100%;
+}
+
+.main-header {
+    margin-bottom: 20px;
+}
+
+.main-header #header-logo {
+    margin-bottom: 16px !important;
+}
+
+#header-logo a:hover, #header-logo a:active, #header-logo a:focus {
+    text-shadow: 2px 2px 2px rgb(195, 116, 41);
+}
+
+#menu-avatar:hover .user-avatar, #menu-avatar:hover .user-name, #menu-avatar:active .user-avatar, #menu-avatar:active .user-name, #menu-avatar:focus .user-avatar, #menu-avatar:focus .user-name {
+    text-shadow: 2px 2px 2px rgb(195, 116, 41);
+}
+
+.nav-front {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+.nav-front:hover, .nav-front:active, .nav.front:focus {
+    color: white;
+    text-shadow: 2px 2px 2px rgb(195, 116, 41);
+}
+
+a.user-action-logout {
+    color: #EC8B32;
+}
+
+a.user-action-logout:hover {
+    color: #EC8B32;
+    font-weight: bold;
+}
+
+.main-header #navigation-toggler {
+    margin-top: -20px;
+    filter: opacity(100%);
+    font-size: 24px;
+}
+
+#navigation-toggler .fa-bars {
+    color: white;
+}
+
+#flash-messages .alert {
+    font-weight: bold;
+    color: white;
+    background-color: grey;
+}
+
+/* easy admin 2.3.5 version */
+
+.field-collection-item-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.field-collection-item-row .field-collection-item-action {
+    flex: 0 0 35px;
+}
+
+.field-collection-item-action {
+    top: -3px !important;
+}
+
+.alert .alert-close:hover {
+    opacity: 1;
+}
+
+
+@media all and (max-width: 630px) {
+
+    .nav-front {
+        color: rgba(255, 255, 255);
+        font-size: 16px;
+    }
+
+    .fas.fa-home, .fas.fa-lightbulb, .fas.fa-pencil-alt {
+        display: none !important;
+    }
+}
+
+/* ---------- TABLE ---------- */
+
+.content-header-title .title {
+    color: #EC8B32;
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.badge-secondary {
+    font-family: var(--font-family-base);
+}
+
+a.btn.btn-link.pr-0.action-list {
+    color: #EC8B32;
+    font-weight: bold;
+}
+
+.form-actions .btn {
+    margin-left: 25px !important;
+}
+
+.select2.select2-container.select2-container--bootstrap.select2-container--focus.select2-container--above.select2-container--open {
+    width: 100% !important;
+    max-width: 350px !important;
+}
+
+.content-footer .btn-primary:not(:disabled):not(.disabled).active,
+.content-footer .btn-primary:not(:disabled):not(.disabled):active,
+.content-footer .show>.btn-primary.dropdown-toggle {
+    background-color: #EC8B32 !important;
+    border: #EC8B32 !important;
+}
+
+[id^=card_tags_] .form-control-label {
+    display: none;
+}
+
+[id^=card_tags_] .form-widget input.form-control {
+    max-width: 315px;
+}

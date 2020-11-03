@@ -1,0 +1,47 @@
+.presentation-orange-stripe {
+    background-color: #EC8B32DE;
+    clip-path: polygon(0 0, 100% 20px, 100% 100%, 0% 100%);
+}
+
+.presentation-orange-stripe a {
+    color: white;
+    text-decoration: underline;
+}
+
+.presentation-orange-stripe a:hover, .presentation-orange-stripe a:active, .presentation-orange-stripe a:focus {
+    color: white;
+}
+
+.presentation-white-stripe {
+    background-color: white;
+    clip-path: polygon(0 20px, 100% 0, 100% 100%, 0% 100%);
+    margin-top: -20px;
+}
+
+.presentation-white-stripe a {
+    color: #EC8B32;
+    text-decoration: underline;
+}
+
+.presentation-white-stripe a:hover, .presentation-white-stripe a:active, .presentation-white-stripe a:focus {
+    color: #EC8B32;
+}
+
+.presentation-last-stripe {
+    margin-bottom: -100px;
+    padding-bottom: 100px;
+}
+
+#rules-learning {
+    color: #EC8B32;
+    font-weight: bold;
+}
+
+#rules-learning span {
+    color: #212529;
+    font-weight: 400;
+}
+
+figcaption {
+    color: grey;
+}

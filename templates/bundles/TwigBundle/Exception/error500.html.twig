@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur interne du serveur{% endblock %}
+
+{% block metaDescription %}
+<meta name="description" content="La page que vous souhaitez voir n'a pas
+    pu aboutir à cause d'une erreur du serveur.">
+{% endblock %}
+
+{% block ogMeta %}
+<!-- block og:meta (facebook) : url, title and description -->
+<meta property="og:url" content="{{ app.request.uri }}" />
+<meta property="og:title" content="Erreur interne du serveur | ExtraMémoire" />
+<meta property="og:description" content="La page que vous souhaitez voir n'a pas
+    pu aboutir à cause d'une erreur du serveur." />
+{% endblock %}
+
+{% block JSON %}
+<!-- block SEO JSON -->
+<script type='application/ld+json'>
+    {
+        "@context": "http://www.schema.org",
+        "@type": "WebSite",
+        "name": "Erreur interne du serveur | ExtraMémoire",
+        "url": "{{ app.request.uri }}"
+    }
+</script>
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/error.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class=" col-10 offset-1 col-md-8 offset-md-2 text-center message-error mt-5">
+            <h1 class="position-relative">Oups, erreur interne du serveur !</h1>
+
+            <p class="message-text">
+                La page que vous souhaitez voir n'a pas pu aboutir à cause d'une erreur du serveur.<br />
+                Rechargez la page et, si le problème persiste, armez-vous simplement de patience,
+                nous réglons le problème le plus rapidement possible.<br />
+                En attendant, peut-être que vous trouverez ce que vous cherchez sur la <a href="{{ path('home') }}"
+                    title="Revenir à la page d'Accueil">page d'Accueil</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

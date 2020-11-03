@@ -1,0 +1,89 @@
+
+/* ---------- SECTION PRESENTATION/CUSTOMIZED MESSAGE ---------- */
+
+.homepage-presentation {
+    color: grey;
+}
+
+.homepage-presentation .message-icon {
+    font-size: 3rem;
+    color: #EC8B32;
+}
+
+.message-home {
+    color: grey;
+}
+
+.text-presentation a, .message-home a {
+    color: #EC8B32;
+    text-decoration: underline;
+}
+
+.message-home a:hover, .message-home a:active, .message-home a:focus,
+.text-presentation a:hover, .text-presentation a:active, .text-presentation a:focus  {
+    color: #EC8B32;
+}
+
+.message-home .message-text {
+    font-size: 1.5rem;
+}
+
+.message-home .message-reminder {
+    font-size: 1.2rem;
+}
+
+.message-home .message-icon {
+    font-size: 4rem;
+}
+
+/* ---------- SECTION CARD ---------- */
+
+#card-container .card-content {
+    color: grey;
+    font-size: 1.9rem;
+    word-wrap: break-word;
+}
+
+.count-user {
+    color: #EC8B32;
+    font-weight: bold;
+}
+
+.card-user {
+    border: 2px solid #EC8B32;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px grey !important;
+}
+
+.tag-user {
+    border: 1px solid #EC8B32;
+    border-radius: 5px;
+    color: #EC8B32;
+    font-size: 12px;
+    padding: 2px 8px 2px 8px;
+}
+
+#form-card .form-group {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#verso-container {
+    display: none;
+}
+
+@media all and (max-width: 576px) {
+
+    #card-container .card-content {
+        font-size: 1.6rem;
+    }
+}
+
+/* ---------- MAINTENANCE ---------- */
+
+#bloc-page .disabled {
+    cursor: not-allowed;
+    pointer-events: auto;
+    z-index: 0;
+}

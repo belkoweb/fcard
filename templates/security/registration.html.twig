@@ -1,0 +1,60 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Je m'inscris{% endblock %}
+
+{% block metaDescription %}
+    <meta name="description" content="Remplissez le formulaire d'inscription et
+    créez vos premières cartes mémoire !">
+{% endblock %}
+
+{% block ogMeta %}
+    <!-- block og:meta (facebook) : url, title and description -->
+    <meta property="og:url" content="{{ app.request.uri }}" />
+    <meta property="og:title" content="Je m'inscris | ExtraMémoire" />
+    <meta property="og:description" content="Remplissez le formulaire d'inscription et
+    créez vos premières cartes mémoire !" />
+{% endblock %}
+
+{% block JSON %}
+    <!-- block SEO JSON -->
+    <script type='application/ld+json'>
+        {
+            "@context": "http://www.schema.org",
+            "@type": "WebSite",
+            "name": "Je m'inscris | ExtraMémoire",
+            "url": "{{ app.request.uri }}"
+        }
+    </script>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/registration.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-5">
+                <h1 class="position-relative text-center">Je m'inscris</h1>
+                <p class="text-registration text-center lead mb-5">Vos cartes mémoire à portée de clics !</p>
+
+                {{ form_start(form, {'attr': {'id': 'form-registration'}}) }}
+
+                {{ form_row(form.email, {'label': "Adresse mail", 'attr': {'placeholder': "Votre adresse mail", 'autofocus': "autofocus"}}) }}
+                {{ form_row(form.pseudo, {'label': "Pseudo", 'attr': {'placeholder': "Choisissez votre pseudo"}}) }}
+                {{ form_row(form.password, {'label': "Mot de passe (minimum 10 caractères)", 'attr': {'placeholder': "Créez votre mot de passe"}})
+                }}
+                {{ form_row(form.confirm_password, {'label': "Confirmez votre mot de passe", 'attr': {'placeholder': "Confirmez votre mot de passe"}}) }}
+                
+                <button type="submit" class="btn btn-info btn-block mt-4 mb-5">Je m'inscris !</button>
+
+                {{ form_end(form)}}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="{{ asset('js/registration.js') }}"></script>
+{% endblock %}

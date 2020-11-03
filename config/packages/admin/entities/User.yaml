@@ -1,0 +1,21 @@
+easy_admin:
+    entities:
+        User:
+            class: App\Entity\User
+            controller: App\Controller\UserController
+            label: 'Paramètres'
+            disabled_actions: ['new', 'search']
+            form:
+                fields: 
+                    - { property: 'dailyLimit', label: 'Limite de révisions quotidiennes' }
+                    - { property: 'pseudo', label: 'Pseudo' }
+                actions:
+                    - { name : 'delete', icon: 'trash', label: 'Supprimer mon compte', css_class: 'btn btn-danger' }
+            list:
+                fields: [{property: 'pseudo', label: 'Pseudo'}, {property: 'cards', label: 'Nb. cartes'}, {property: 'tags', label: 'Nb. tags'}, {property: 'dailyLimit', label: 'Nb. révisions quotidiennes'}]
+                title: "Vos paramètres"
+                actions: 
+                    - { name : 'edit', icon: 'pencil', label: false, css_class: 'btn btn-info' }
+                    - { name : '-delete' }
+            edit:
+                title: "Modifier vos paramètres"

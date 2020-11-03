@@ -1,0 +1,9 @@
+imports: 
+        - { resource: admin/ }
+        
+#        assets:
+#            css: - CSS link
+#                 - 'bundles/easyadmin/bootstrap-all.css' CSS Bootstrap
+#            js:  - JS link
+#                 - 'bundles/easyadmin/bootstrap-all.js'
+#            favicon: '/assets/backend/favicon.png' favicon for backend

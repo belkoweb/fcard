@@ -1,0 +1,203 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Apprenez durablement grâce aux flashcards{% endblock %}
+
+{% block metaDescription %}
+    <meta name="description" content="FCard fonctionne avec des cartes mémoire,
+    des cartes de question-réponse qui favorisent la mémorisation à long terme.">
+{% endblock %}
+
+{% block ogMeta %}
+    <!-- block og:meta (facebook) : url, title and description -->
+    <meta property="og:url" content="{{ app.request.uri }}" />
+    <meta property="og:title" content="Apprenez durablement grâce aux flashcards | FCard" />
+    <meta property="og:description" content="FCard fonctionne avec des cartes mémoire,
+    des cartes de question-réponse qui favorisent la mémorisation à long terme." />
+{% endblock %}
+
+{% block JSON %}
+    <!-- block SEO JSON -->
+    <script type='application/ld+json'>
+        {
+            "@context": "http://www.schema.org",
+            "@type": "WebSite",
+            "name": "Apprenez durablement grâce aux flashcards | FCard",
+            "url": "{{ app.request.uri }}"
+        }
+    </script>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/presentation.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-10 offset-1 text-center mt-5">
+                <h1 class="position-relative">Présentation de l'application</h1> 
+                </div>
+            </div>
+        </div>
+        <div class="presentation-orange-stripe py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 offset-1 text-center mt-5 mb-3">
+                    <h2 class="text-white">Qu'est-ce qu'une flashcard ?</h2>
+                    <p class="mt-5 mb-5 text-presentation text-justify">Une flashcard (également orthographié flash card),
+                        ou une <strong>carte mémoire</strong>, est une carte qui comprend un recto (la question ou le sujet
+                        à apprendre) et un verso (la réponse). <br />
+                        Son utilisation reprend celle des cartes de questions-réponses. Le but des flashcards est d’activer
+                        la <strong>mémoire à long terme</strong>, en étudiant la carte à intervalles réguliers. <br />
+                        Cette technique de mémorisation fait appel au <a
+                            href=" https://fr.wikipedia.org/wiki/Syst%C3%A8me_Leitner "
+                            title="Explications du système Leitner">système Leitner</a>, proposé dans les années 1970 par
+                        un journaliste allemand éponyme, et qui reprend de façon ludique le principe de la répétition
+                        espacée. <br />
+                        La révision d'une <strong>flashcard</strong> se déroule ainsi ; la question est posée, l'utilisateur tente de
+                        trouver la réponse, puis tourne la carte pour en dévoiler la réponse.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="presentation-white-stripe py-4">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-left" class="col-10 offset-1 text-center mt-5 mb-3">
+                    <h2>Comment ça marche, une carte mémoire ?</h2>
+                    <p class="mt-5 mb-5 text-presentation text-justify">Voyez l'ensemble de vos flashcards, ou cartes
+                        mémoire, comme un paquet de cartes, placées dans différentes boîtes. Chaque boîte symbolise le
+                        degré de maîtrise de la carte. Les premières boîtes représentent les premières étapes de
+                        l’<strong>apprentissage</strong>, tandis que les dernières représentent un apprentissage bientôt
+                        accompli. <br />
+                        Lorsqu’une carte est sortie de sa boîte, l’utilisateur tente de se rappeler de la réponse puis,
+                        selon la précision et l'effort demandé pour trouver la réponse, place la carte dans une autre
+                        boîte. Si la réponse est positive, la carte avance d’une boîte. Dans le cas inverse, elle recule
+                        d’une boîte. <br />
+                        Chaque boîte correspond à une <span class="font-weight-bold">date de révision</span>.
+                        Le jour de sa prochaine révision, la carte est sortie de sa boîte, et ainsi de suite.
+                        Plus on avance dans les boîtes, plus on avance dans la maîtrise de la carte, et plus les intervalles
+                        entre les révisions s’allongent. C’est le principe de la <span class="font-weight-bold">répétition espacée</span>.
+                    </p>
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <div class="presentation-orange-stripe py-4">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-right" class="col-10 offset-1 text-center mt-5 mb-3">
+                    <h2 class="text-white">Comment créer et réviser mes flashcards ?</h2>
+                    <p class="mt-5 mb-5 text-presentation text-justify">
+                        <span class="font-weight-bold">FCard</span> reprend le fonctionnement des logiciels
+                        utilisant les techniques de cartes mémoire virtuelles (Anki, Quizlet, Cram, et bien d’autres).
+                        <br />
+                        Concrètement, après vous être inscrit, vous disposerez d'un tableau de bord où vous serez libre de
+                        rajouter et modifier vos <strong>flashcards</strong> à votre guise. <br />
+                        Une fois que vous avez créé vos <strong>cartes mémoire</strong>, revenez quotidiennement sur la
+                        page d'accueil pour les réviser. C'est aussi simple que ça !
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="presentation-white-stripe py-4">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-left" class="col-10 offset-1 text-center mt-5 mb-3">
+                    <h2>Comment décider les dates de révision de mes cartes mémoire ?</h2>
+                    <p class="mt-5 mb-5 text-presentation text-justify">Pour faire court : l'application décide pour vous,
+                        selon la difficulté à laquelle vous avez répondu à la question. <br />
+                        Reprenons depuis le début. Vous venez de vous inscrire, vous créez votre première
+                        <strong>flashcard</strong> depuis le tableau de bord, et vous revenez sur la page d'accueil. Si
+                        tout s'est bien déroulé, la <strong>carte mémoire</strong> que vous venez de créer s’affiche
+                        (exemple ci-dessous).
+                    </p>
+
+                    <figure>
+                        <img class="img-fluid" src="{{ asset('img/flashcard-exemple.png') }}" alt="Un exemple de carte mémoire">
+                        <figcaption class="px-sm-5">En haut à gauche, le tag (étiquette) associé. En haut à droite, le nombre de cartes
+                            à réviser et le nombre de cartes révisées. En bas, les boutons qui représentent la difficulté
+                            de la question.
+                        </figcaption>
+                    </figure>
+                    
+                    <p class="mt-5 mb-5 text-presentation text-justify">Vous réfléchissez à la question, puis, lorsque vous
+                        estimez avoir trouvé la réponse, vous appuyez sur le bouton "Voir la réponse". Ensuite, un ensemble
+                        de boutons vous est proposé. Ces boutons représentent la difficulté de la question. Selon votre
+                        choix, la <strong>flashcard</strong> réapparaitra le jour-même (le bouton À revoir), ou un peu plus
+                        tard (Difficile), plus tard (Correct), et beaucoup plus tard (Facile). <br />
+                        Lors de la création de votre <strong>carte mémoire</strong>, celle-ci apparaîtra deux fois le premier
+                        jour de sa révision, puis les intervalles deviendront de plus en plus espacés.
+                    </p>
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <div class="presentation-orange-stripe py-4">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-right" class="col-10 offset-1 text-center mt-5 mb-3">
+                    <h2 class="text-white">Combien de flashcards puis-je réviser quotidiennement ?</h2>
+                    <p class="mt-5 mb-5 text-presentation text-justify">
+                        La limite quotidienne est fixée initialement à <span class="font-weight-bold">50 cartes
+                            par jour</span>. <br />
+                        Cependant, selon vos envies, vous pouvez modifier cette limite depuis votre tableau de bord.
+                        Cliquez sur l'onglet Paramètres, puis sur le bouton modifier, à l'extrémité droite du tableau. Vous
+                        pouvez également modifier de cette manière votre pseudo.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="presentation-white-stripe presentation-last-stripe pt-4">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-left" class="col-10 offset-1 text-center mt-5 mb-3">
+                    <h2>Comment bien apprendre ?</h2>
+                    <p class="mt-5 text-presentation text-justify">
+                        Si vous êtes familier de la langue de Shakespeare, je vous recommande chaudement cet article,
+                        qui énumère les 20 règles pour un apprentissage efficace :
+                        <a href=" https://www.supermemo.com/en/archives1990-2015/articles/20rules "
+                        title="20 règles pour apprendre efficacement"> Effective learning: Twenty rules of formulating knowledge</a>
+                    </p>
+                    <p class="text-presentation text-justify">
+                        Pour les plus pressés, voici un bref résumé des règles indispensables au bon apprentissage d'une
+                        flashcard :
+                    </p>
+                    <ol id="rules-learning" class="text-presentation text-left">
+                        <li> <span>N'apprenez que ce que vous comprenez (ça semble bête, mais c’est un point essentiel). <br />
+                            Si vous ne comprenez pas, essayez d’expliquer le concept avec vos propres mots,
+                            le plus simplement possible.</span>
+                        </li>
+                        <li> <span>Faites l'effort d'apprendre avant de mémoriser.</span> </li>
+                        <li> <span>Faites simple, basique (n'y voyez aucun hommage à Orelsan).</span> </li>
+                        <li> <span>Faites des réponses courtes (plus c'est court et simple, plus c'est facile à apprendre).</span> </li>
+                        <li> <span>Utilisez des moyens mnémotechniques, faites travaillez votre imagination !</span> </li>
+                        <li> <span>Évitez les listes, les groupes, les réponses allongées. Restez simple et concis : une question,
+                            une réponse !</span> </li>
+                        <li> <span>Faites des questions avec le moins de mots possibles (encore une fois, moins il y a de mots et
+                            mieux c'est !)</span> </li>
+                        <li> <span>(Si possible) Ajoutez des anecdotes personnelles (ex. Acariâtre (comme le voisin)).</span> </li>
+                        <li> <span>(Si possible) Ajoutez un contexte à vos questions (ex. Stupéfaction (comme les anglais qui n'ont
+                            pas vu venir le Brexit).</span> </li>
+                        <li> <span>(Si possible) Employez des abréviations (encore une fois, moins il y a de mots et plus la
+                            connexion est rapide !).</span> </li>
+                    </ol>
+                    <p class="mt-5 mb-5 text-presentation text-justify">Bonnes révisions, amusez-vous bien !</p>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+{% endblock %}

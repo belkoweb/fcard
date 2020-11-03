@@ -1,0 +1,36 @@
+easy_admin:
+    entities:
+        # List the entity class name you want to manage
+        Card:
+            class: App\Entity\Card
+            label: 'Cartes'
+            form:
+                fields: 
+                    - { property: 'recto', label: 'Recto', help: 'Le sujet à apprendre' }
+                    - { property: 'verso', label: 'Verso', help: 'Sa définition' }
+                    - { property: 'datePublication', label: 'Prochaine révision' }
+                    - { property: 'tags', label: 'Tag(s)', type: 'collection', type_options: { entry_type: 'App\Form\TagType', allow_delete: true, allow_add: true, 'by_reference': false }}
+            list:
+                fields: [{property: 'recto', label: 'Cartes'}, {property: 'tags', label: 'Tags'}, {property: 'datePublication', label: 'Prochaine révision'}]
+                title: "Parcourez vos flashcards"
+                max_results: 10
+                sort: ['recto', 'ASC']
+                actions: 
+                    - { name : 'edit', icon: 'pencil', label: false, css_class: 'btn btn-info' }
+                    - { name : 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger' }
+                    - { name : 'new', label: "Nouvelle carte" }
+                    - { name : 'search', label: "Rechercher" }
+            search:
+                title: "Le résultat de votre recherche :"
+                max_results: 10
+                sort: ['recto', 'ASC']
+            show:
+                title: "Votre flashcard en détail"
+            new:
+                title: "Ajouter une carte"
+                fields:
+                    - '-datePublication'
+            edit:
+                title: "Modifier une carte"
+                actions: 
+                    - { name : 'delete', icon: 'trash', label: 'Supprimer cette carte', css_class: 'btn btn-danger' }

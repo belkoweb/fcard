@@ -1,0 +1,103 @@
+
+/* ---------- HEADER ---------- */
+
+body {
+    font-family: 'Nunito', sans-serif !important;
+}
+
+#bloc-page .bg-primary .navbar-nav .active>.nav-link {
+    color: white !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	color: grey !important;
+}
+
+h1 {
+    margin-bottom: 100px !important;
+}
+
+h1::after {
+    background-color: #EC8B32;
+    bottom: -30px;
+    clip-path: polygon(100% 25%, 0 0, 0 50%);
+    content: '';
+    display: block;
+    height: 15px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 20%;
+}
+
+h2 {
+    font-size: 2rem !important;
+}
+
+#bloc-page .bg-primary {
+    background-color: #EC8B32 !important;
+    background-image: none;
+}
+
+#bloc-page .lead {
+    font-size: 1.25rem;
+}
+
+.nav-front {
+    color: white !important;
+    font-size: 16px;
+}
+
+.nav-front:hover, .nav-front:active, .nav.front:focus {
+    color: white !important;
+    text-shadow: 2px 2px 2px rgb(195, 116, 41);
+}
+
+.navbar-brand:hover, .nav-brand:active, .nav-brand:focus {
+    text-shadow: 2px 2px 2px rgb(195, 116, 41);
+}
+
+@media all and (max-width: 576px) {
+
+    h1 {
+        font-size: 2.1rem !important;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* ---------- SECTION ---------- */
+
+.text-presentation {
+    font-size: 1.1rem;
+}
+
+label.error {
+    color: #EC8B32;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: rgb(206, 206, 206);
+    margin-top: 100px;
+    padding: 40px 0 40px 0;
+}
+
+footer a {
+    color: grey !important;
+    font-size: 16px;
+}
+
+footer .logo {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+footer .logo-img {
+    height: 27px;
+    margin: -4px 6px 0 -5px;
+    width: 27px;
+}

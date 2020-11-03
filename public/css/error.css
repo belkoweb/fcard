@@ -1,0 +1,16 @@
+.message-error {
+    color: grey;
+}
+
+.message-error a {
+    color: #EC8B32;
+    text-decoration: underline;
+}
+
+.message-error a:hover, .message-error a:active, .message-error a:focus  {
+    color: #EC8B32;
+}
+
+.message-error .message-text {
+    font-size: 1.2rem;
+}
